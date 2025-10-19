@@ -1,33 +1,29 @@
-package Sample;
-
-import java.util.Scanner;
+package Practical;
 
 public class Employee {
-	static String companyname ="flipcart";
-	String name;
-	int id;
-	double salary;
-	Employee(String name,int id,double salary){
-		this.name = name;
-		this.id = id;
-		this.salary = salary;
+	    private int empId;
+	    private String empName;
+	    private String empDesignation;
+	    private double empSal;
+	    public Employee(int empId, String empName, String empDesignation, double empSal) {
+	        this.empId = empId;
+	        this.empName = empName;
+	        this.empDesignation = empDesignation;
+	        this.empSal = empSal;
+	    }
+	   @Override
+	    public String toString() {
+	        return "Employee{" +
+	                "empId=" + empId +
+	                ", empName='" + empName + '\'' +
+	                ", empDesignation='" + empDesignation + '\'' +
+	                ", empSal=" + empSal +
+	                '}';
+	    }
+	    public static void main(String[] args) {
+	        Employee employee1 = new Employee(101, "John Doe", "Manager", 50000.0);
+	        Employee employee2 = new Employee(102, "Jane Smith", "Developer", 45000.0);
+	        System.out.println(employee1);
+	        System.out.println(employee2);
+	    }
 	}
-	void displayDetails() {
-		System.out.println("Employee Name:"+name);
-		System.out.println("Employee Id:"+id);
-		System.out.println(" Employee Salary:"+salary);
-	}
-	public static void main(String[] args) {
-		Scanner sc= new Scanner(System.in);
-		System.out.println("Enter Employee Name:");
-		String name=sc.nextLine();
-		System.out.println("Enter Empoloyee Id:");
-		int id=sc.nextInt();
-		System.out.println(" Employee Salary:");
-		double salary=sc.nextDouble();
-		Employee e1= new Employee(name, id, salary );
-		e1.displayDetails();
-		sc.close();
-	}
-}
-
