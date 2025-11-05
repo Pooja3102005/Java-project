@@ -1,4 +1,4 @@
-package Inheritance;
+package Practical;
 import java.util.Scanner;
 
 class InvalidDateException extends Exception {
@@ -77,7 +77,7 @@ public class DateException {
             System.out.println(e);
         }
     }
-
-
 }
+
+
 
